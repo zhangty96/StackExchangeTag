@@ -5,7 +5,13 @@
 # 2. Removing punctuation and lower-casing
 # 3. Removing stopwords
 # 4. Convert tags to list of tags
-# Credit to: MatteoTosi
+
+# Credit to:
+#    Title: Useful Text Preprocessing on the datasets 
+#    Author: MatteoTosi
+#    Date: 02/03/2017
+#    Code version: Unknown
+#    Availability: https://www.kaggle.com/l3nnys/transfer-learning-on-stack-exchange-tags/useful-text-preprocessing-on-the-datasets
 
 
 import pandas as pd
