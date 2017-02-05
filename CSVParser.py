@@ -20,6 +20,7 @@ def parser(filepath):
     for index in range(len(title)):
         X_train = X_train.append(title[index]+content[index])
 
+
     # for testing X
     title = list(rawTest['title'])
     content = list(rawTest['content'])
