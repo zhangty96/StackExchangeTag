@@ -5,8 +5,10 @@ import math as m
 def parser(filepath):
     rawText = pd.read_csv(filepath)
     rawText = rawText.sample(frac=1)
-    rawTraining = rawText[1:int(len(rawText)*0.7)]           #split data into 70% training
-    rawTest = rawText[int(len(rawText)*0.7)-1:len(rawText)]  # and 30% testing
+    # change it to 65/15/20 for training/model selection/validation
+    rawTraining = rawText[1:int(len(rawText)*0.65)]           #split data into 70% training
+    rawTest = rawText[int(len(rawText)*0.65)-1:int(len(rawText)*0.8)]  # and 30% testing
+    rawValid = rawText[int(len(rawText)*0.8)-81:len(rawText)]
     y_train = list(rawTraining['tags'])
     y_test = list(rawTest['tags'])
 
