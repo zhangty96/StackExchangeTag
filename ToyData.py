@@ -23,3 +23,6 @@ X_test = np.array(['nice day in nyc',
                    'welcome to london',
                    'hello welcome to new york. enjoy it here and london too'])
 target_names = ['New York', 'London']  # index--> names
+
+
+# Small Section from the Stack Exchange Data
