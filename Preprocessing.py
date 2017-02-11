@@ -40,14 +40,18 @@ def stripTagsAndUris(x):
         return ""
 
 
-def removePunctuation(x):
+def removePunctuation(x, removepun = False):
+    # input True for removepun if punctuations(, . ; ? !) need to be removed
+
     # Lowercasing all words
     x = x.lower()
     # Removing non ASCII chars
     x = re.sub(r'[^\x00-\x7f]',r' ',x)
-    # Removing (replacing with empty spaces actually) all the punctuations
-    return re.sub("["+string.punctuation+"]", " ", x)
 
+    if removepun ==True:
+        # Removing (replacing with empty spaces actually) all the punctuations
+        return re.sub("["+string.punctuation+"]", " ", x)
+    return x
 
 def removeStopwords(x):
     stops = set(stopwords.words("english"))
@@ -80,9 +84,9 @@ def preprocess():
         df["content"] = df["content"].map(removePunctuation)
 
 
-    for df in dataframes.values():
-        df["title"] = df["title"].map(removeStopwords)
-        df["content"] = df["content"].map(removeStopwords)
+    # for df in dataframes.values():
+    #     df["title"] = df["title"].map(removeStopwords)
+    #     df["content"] = df["content"].map(removeStopwords)
 
     for df in dataframes.values():
         # From a string sequence of tags to a list of tags
@@ -90,7 +94,7 @@ def preprocess():
 
     for name, df in dataframes.items():
         # Saving to file
-        df.to_csv(name + "_light.csv", index=False)
+        df.to_csv(name + "_htmlclear.csv", index=False)
 
 
 

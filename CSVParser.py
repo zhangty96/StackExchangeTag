@@ -63,6 +63,7 @@ def parser(filepath):
     return np.array(y_train), np.array(y_test), np.array(y_valid), np.array(X_train), np.array(X_test), np.array(X_valid)
 
 # [ y_train, y_test, y_valid, X_train, X_test, X_valid]=parser('./CleanData/cooking_light.csv')
+# [ y_train, y_test, y_valid, X_train, X_test, X_valid]=parser('./CleanData/cooking_htmlclear.csv')
 # print len(X_train)
 # print len(y_train)
 # print X_train[0]
