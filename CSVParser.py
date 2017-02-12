@@ -32,7 +32,7 @@ def parser(filepath):
     y_train = y_cleaner(rawTraining["tags"])                                            #get the tags into list of lists
     y_test = y_cleaner(rawTest["tags"])
     y_valid = y_cleaner(rawValid["tags"])
-    print y_test
+    # print y_test
 
     #for training X
     title = list(rawTraining['title'])
