@@ -17,6 +17,7 @@ import nltk
 from nltk.corpus import stopwords
 nltk.download()
 
+
 # X_train = np.array(["new york is a hell of a town",
 #                     "new york was originally dutch",
 #                     "the big apple is great",
