@@ -16,7 +16,7 @@ def RakeExtract(text, stoppath = "SmartStoplist.txt"):
     """
 
     # Each word has at least 5 characters, each phrase has at most 3 words
-    rake_object = rake.Rake(stoppath, 3, 2, 1)
+    rake_object = rake.Rake(stoppath, 2, 2, 1)
 
     # Splits the text into sentences
     sentenceList = rake.split_sentences(text)
